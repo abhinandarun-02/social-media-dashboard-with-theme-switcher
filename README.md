@@ -7,8 +7,7 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 - [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
 - [Built with](#built-with)
-
-[//]: # (- [Links]&#40;#links&#41;)
+- [Links](#links)
 
 
 ## The challenge
@@ -33,7 +32,7 @@ Users should be able to:
 - Flexbox
 - Grid
 
-[//]: # (## Links)
+## Links
 
-[//]: # (- Solution URL: [Add solution URL here]&#40;https://your-solution-url.com&#41;)
-[//]: # (- Live Site URL: [https://abhinandarun-02.github.io/NFT-preview-card-component/]&#40;https://abhinandarun-02.github.io/NFT-preview-card-component/&#41;)
+- Solution URL: [https://www.frontendmentor.io/solutions/social-media-dashboard-using-sass-flexbox-and-grid-tw8sgLjhVl](https://www.frontendmentor.io/solutions/social-media-dashboard-using-sass-flexbox-and-grid-tw8sgLjhVl)
+- Live Site URL: [https://abhinandarun-02.github.io/social-media-dashboard-with-theme-switcher/](https://abhinandarun-02.github.io/social-media-dashboard-with-theme-switcher/)
