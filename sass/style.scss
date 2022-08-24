@@ -1,0 +1,264 @@
+@import "base";
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  background: linear-gradient(180deg, var(--bg-top-blue) 25%, var(--bg-primary) 25%);
+  margin: 0;
+  padding: 0;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 56px;
+  height: 25px;
+  background-color: var(--toggle);
+  background-image: var(--toggle);
+  border-radius: 25px;
+
+  &:hover {
+    background-image: $toggle-dark;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+
+    &:checked ~ .control:after {
+      left: 32px;
+    }
+
+  }
+
+  .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+
+    &:after {
+      content: '';
+      background-color: var(--bg-card);
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 4px;
+      border-radius: 50%;
+      transition: .18s;
+    }
+  }
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: var(--bg-card-hover);
+  }
+
+  .title {
+    gap: .5rem;
+    font-weight: 700;
+  }
+
+  .content {
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    h3 {
+      font-size: .7rem;
+      font-weight: 400;
+      letter-spacing: .4rem;
+    }
+  }
+
+  .stat {
+    gap: .4rem;
+
+    .up {
+      color: $up-color;
+    }
+
+    .down {
+      color: $down-color;
+    }
+
+    img {
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &.primary {
+    > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:before {
+      content: '';
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--secondary-color);
+    }
+
+    &#fb:before {
+      background-color: $primary-facebook;
+    }
+
+    &#tw:before {
+      background-color: $primary-twitter;
+    }
+
+    &#ig:before {
+      background-image: $primary-instagram;
+    }
+
+    &#yt:before {
+      background-color: $primary-youtube;
+    }
+  }
+
+
+  &.secondary {
+    gap: 0;
+
+    > * {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+    }
+
+    .details {
+      padding-top: 1.4rem;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  width: 80%;
+
+  h1 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+  }
+
+  h3 {
+    font-size: inherit;
+    margin-top: .25rem;
+    color: var(--secondary-color);
+  }
+
+  .theme-selection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 0 0 auto;
+  }
+}
+
+.hero {
+  width: 80%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  justify-content: center;
+  margin: 1.5rem auto 0 auto;
+}
+
+.sub-header {
+  color: var(--primary-color);
+  margin: 2.5rem auto 0 auto;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.overview {
+  width: 80%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  justify-content: center;
+  margin: 1.5rem auto 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.375rem;
+    }
+
+    .theme-selection {
+      justify-content: space-between;
+      padding-top: 1.4rem;
+      margin-top: 1.4rem;
+      border-top: 1px solid var(--secondary-color);
+    }
+  }
+  .card.secondary {
+    padding: 1.8rem 2rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--primary-color);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

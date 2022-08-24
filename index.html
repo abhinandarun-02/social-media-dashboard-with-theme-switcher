@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="stat">
+        <h1>Social Media Dashboard</h1>
+        <h3>Total Followers: 23,004</h3>
+    </div>
+    <div class="theme-selection">
+        <h3>Dark Mode</h3>
+        <div class="theme-toggle" onclick=switchTheme()>
+            <label class="toggle-control">
+                <input type="checkbox" checked="checked">
+                <span class="control"></span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="card primary" id="fb">
+        <div class="title">
+            <img src="images/icon-facebook.svg" alt="facebook icon">
+            <span>@nathanf</span>
+        </div>
+        <div class="content">
+            <h1>1987</h1>
+            <h3>Followers</h3>
+        </div>
+        <div class="stat">
+            <img src="images/icon-up.svg" alt="up icon">
+            <h4 class="up">12 Today</h4>
+        </div>
+    </div>
+    <div class="card primary" id="tw">
+        <div class="title">
+            <img src="images/icon-twitter.svg" alt="twitter icon">
+            <span>@nathanf</span>
+        </div>
+        <div class="content">
+            <h1>1044</h1>
+            <h3>Followers</h3>
+        </div>
+        <div class="stat">
+            <img src="images/icon-up.svg" alt="up icon">
+            <h4 class="up">99 Today</h4>
+        </div>
+    </div>
+    <div class="card primary" id="ig">
+        <div class="title">
+            <img src="images/icon-instagram.svg" alt="instagram icon">
+            <span>@realnathanf</span>
+        </div>
+        <div class="content">
+            <h1>11k</h1>
+            <h3>Followers</h3>
+        </div>
+        <div class="stat">
+            <img src="images/icon-up.svg" alt="up icon">
+            <h4 class="up">1099 Today</h4>
+        </div>
+    </div>
+    <div class="card primary" id="yt">
+        <div class="title">
+            <img src="images/icon-youtube.svg" alt="youtube icon">
+            <span>Nathan F.</span>
+        </div>
+        <div class="content">
+            <h1>8239</h1>
+            <h3>Subscribers</h3>
+        </div>
+        <div class="stat">
+            <img src="images/icon-down.svg" alt="down icon">
+            <h4 class="down">144 Today</h4>
+        </div>
+    </div>
+</div>
+
+<div class="sub-header">
+    <h2>Overview - Today</h2>
+</div>
+
+<div class="overview">
+    <div class="card secondary">
+        <div class="title"><h4>Page Views</h4>
+            <img src="images/icon-facebook.svg" alt="facebook icon">
+        </div>
+        <div class="details">
+            <h2>87</h2>
+            <div class="stat">
+                <img src="images/icon-up.svg" alt="up icon">
+                <h4 class="up">3%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Likes</h4>
+            <img src="images/icon-facebook.svg" alt="facebook icon">
+        </div>
+        <div class="details">
+            <h2>52</h2>
+            <div class="stat">
+                <img src="images/icon-down.svg" alt="up icon">
+                <h4 class="down">2%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Likes</h4>
+            <img src="images/icon-instagram.svg" alt="instagram icon">
+        </div>
+        <div class="details">
+            <h2>5462</h2>
+            <div class="stat">
+                <img src="images/icon-up.svg" alt="up icon">
+                <h4 class="up">2257%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Profile Views</h4>
+            <img src="images/icon-instagram.svg" alt="instagram icon">
+        </div>
+        <div class="details">
+            <h2>52k</h2>
+            <div class="stat">
+                <img src="images/icon-up.svg" alt="up icon">
+                <h4 class="up">1375%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Retweets</h4>
+            <img src="images/icon-twitter.svg" alt="twitter icon">
+        </div>
+        <div class="details">
+            <h2>117</h2>
+            <div class="stat">
+                <img src="images/icon-up.svg" alt="up icon">
+                <h4 class="up">303%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Likes</h4>
+            <img src="images/icon-twitter.svg" alt="twitter icon">
+        </div>
+        <div class="details">
+            <h2>507</h2>
+            <div class="stat">
+                <img src="images/icon-up.svg" alt="up icon">
+                <h4 class="up">553%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Likes</h4>
+            <img src="images/icon-youtube.svg" alt="youtube icon">
+        </div>
+        <div class="details">
+            <h2>107</h2>
+            <div class="stat">
+                <img src="images/icon-down.svg" alt="down icon">
+                <h4 class="down">19%</h4>
+            </div>
+        </div>
+    </div>
+    <div class="card secondary">
+        <div class="title"><h4>Total Views</h4>
+            <img src="images/icon-youtube.svg" alt="youtube icon">
+        </div>
+        <div class="details">
+            <h2>1407</h2>
+            <div class="stat">
+                <img src="images/icon-down.svg" alt="down icon">
+                <h4 class="down">12%</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Abhinand Arun</a>.
+</div>
+
+</body>
+
+<script src="js/script.js"></script>
+</html>
